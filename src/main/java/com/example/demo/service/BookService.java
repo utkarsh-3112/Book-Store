@@ -1,0 +1,19 @@
+package com.example.demo.service;
+
+import com.example.demo.models.Book;
+import com.example.demo.models.UserAccount;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface BookService {
+	
+	public List<Book> getAllBooks(UserAccount userAccount) throws SQLException;
+	public List<Book> getBooksOfUser(UserAccount userAccount) throws SQLException;
+	public boolean addBook(Book book) throws SQLException;
+	public boolean deleteBook(Book book) throws SQLException;
+	public boolean updateBook(Book book) throws SQLException;
+	public Book getBook(int bookId) throws SQLException;
+	public boolean issueBook(int bookId, UserAccount userAccount) throws SQLException;
+	public boolean returnBook(int bookId) throws SQLException;
+}
