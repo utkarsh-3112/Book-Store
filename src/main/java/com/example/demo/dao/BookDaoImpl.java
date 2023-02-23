@@ -125,7 +125,7 @@ public class BookDaoImpl implements BookDao{
 	}
 	
 	private Book setBook(ResultSet resultSet) throws SQLException {
-		int bookId = resultSet.getInt("bookId");
+		int bookId = resultSet.getInt("book_id");
 		String title = resultSet.getString("title");
 		int edition = resultSet.getInt("edition");
 		String author = resultSet.getString("author");

@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface BookService {
 	
-	public List<Book> getAllBooks(UserAccount userAccount) throws SQLException;
+	public List<Book> getAllBooks() throws SQLException;
 	public List<Book> getBooksOfUser(UserAccount userAccount) throws SQLException;
 	public boolean addBook(Book book) throws SQLException;
 	public boolean deleteBook(Book book) throws SQLException;

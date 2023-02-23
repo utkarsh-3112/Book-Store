@@ -13,7 +13,7 @@ public class BookServiceImpl implements BookService{
 	private final BookDao bookDao = new BookDaoImpl();
 	
 	@Override
-	public List<Book> getAllBooks(UserAccount userAccount) throws SQLException {
+	public List<Book> getAllBooks() throws SQLException {
 		return bookDao.getAllBooks();
 	}
 	

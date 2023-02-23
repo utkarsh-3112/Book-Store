@@ -6,18 +6,18 @@ import java.sql.SQLException;
 
 class MySQLConnUtils {
 	
-	private String jdbcURL = "jdbc:mysql://localhost:3306/bookstore";
+	private String jdbcURL = "jdbc:mysql://localhost:3306/bookstore?useSSL=false&serverTimezone=UTC";
 	
-	private String jdbcUsername = "root";
+	private String jdbcUsername = "myUser";
 	
-	private String jdbcPassword = "UK@123";
+	private String jdbcPassword = "kannu@123";
 	
-	private Connection jdbcConnection;
+	private Connection jdbcConnection = null;
 	
 	Connection getConnection() throws SQLException {
-		if (jdbcConnection.isClosed()) {
+		if (jdbcConnection == null || jdbcConnection.isClosed()) {
 			try {
-				Class.forName(jdbcURL);
+				Class.forName("com.mysql.cj.jdbc.Driver");
 			}
 			catch (ClassNotFoundException e) {
 				throw new SQLException(e);

@@ -9,6 +9,19 @@ public class Book {
 	private float price;
 	private String user;
 	
+	@Override
+	public String toString() {
+		return "Book{" +
+				"bookId=" + bookId +
+				", title='" + title + '\'' +
+				", edition=" + edition +
+				", author='" + author + '\'' +
+				", publication='" + publication + '\'' +
+				", price=" + price +
+				", user='" + user + '\'' +
+				'}';
+	}
+	
 	public Book(int bookId, String title, int edition, String author, String publication, float price, String user) {
 		this.bookId = bookId;
 		this.title = title;

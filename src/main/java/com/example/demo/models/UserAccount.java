@@ -5,10 +5,18 @@ public class UserAccount {
 	private String userName;
 	private String gender;
 	private String password;
-	private int mobileNo;
+	private String mobileNo;
 	private String firstName;
 	private String lastName;
 	
+	public UserAccount(String userName, String gender, String password, String mobileNo, String firstName, String lastName) {
+		this.userName = userName;
+		this.gender = gender;
+		this.password = password;
+		this.mobileNo = mobileNo;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 	
 	public String getUserName() {
 		return userName;
@@ -34,11 +42,11 @@ public class UserAccount {
 		this.password = password;
 	}
 	
-	public int getMobileNo() {
+	public String getMobileNo() {
 		return mobileNo;
 	}
 	
-	public void setMobileNo(int mobileNo) {
+	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 	
